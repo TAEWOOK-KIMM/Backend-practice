@@ -6,7 +6,7 @@ const todoList = document.getElementById('todo-list');
 function addTodo() {
     const task = input.value;
     if (task.trim() === "") return;
-
+    
     const listItem = document.createElement('li');
 
     const taskText = document.createElement('span');
