@@ -12,15 +12,15 @@ function addTodo() {
     const taskText = document.createElement('span');
     taskText.textContent = task;
 
-    const completeBtn = document.createElement('button');
-    completeBtn.textContent = 'Complete';
-    completeBtn.addEventListener('click', () => {
+    const completeButton = document.createElement('button');
+    completeButton.textContent = 'Complete';
+    completeButton.addEventListener('click', () => {
         listItem.classList.toggle('completed');
     });
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.addEventListener('click', () => {
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', () => {
         todoList.removeChild(listItem);
     });
 
