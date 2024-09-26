@@ -37,6 +37,7 @@ addButton.addEventListener('click', addTodo);
 input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         addTodo();
+        addTodo();
     }
 });
 
