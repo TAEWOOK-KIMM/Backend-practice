@@ -1,3 +1,29 @@
+const inputs = document.getElementById('todo-input')
+const addButtons = document.getElementById('add-btn')
+const todoLists = document.getElementById('todo-list')
+
+function addsTodo() {
+    const task = input.value
+    if (task.trim() === ""){
+        return
+    }
+
+    const listItem = document.createElement('li')
+
+    const taskText = document.createElement('add-btn')
+    taskText.textContent = task
+
+    const completeButton = document.createElement('button')
+    completeButton.textContent = 'complete'
+}
+
+
+
+
+
+
+
+
 const input = document.getElementById('todo-input');
 const addButton = document.getElementById('add-btn');
 const todoList = document.getElementById('todo-list');
@@ -37,7 +63,7 @@ addButton.addEventListener('click', addTodo);
 input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         addTodo();
-        addTodo();
+
     }
 });
 
