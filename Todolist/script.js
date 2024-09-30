@@ -26,7 +26,7 @@ function addTodo() {
 
     listItem.appendChild(taskText);
     listItem.appendChild(completeBtn);
-    listItem.appendChild(deleteBtn);
+    listItem.appendChild(deleteBtn);    
     todoList.appendChild(listItem);
 
     input.value = '';
