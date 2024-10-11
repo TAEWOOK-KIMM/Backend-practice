@@ -66,21 +66,11 @@ int getSize(IntArray *arr) {
 }
 
 bool isFull(IntArray *arr) {
-    if(arr->size == 10) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return arr->size == MAX_SIZE;
 }
 
 bool isEmpty(IntArray *arr) {
-    if(arr->size == 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
+	return arr->size == 0;
 }
 
 void insert(IntArray *arr, int value, int index) {
@@ -92,10 +82,11 @@ void insert(IntArray *arr, int value, int index) {
 		printf("Error: index is invalid\n");
 		return;
     }
-    for(int i=index; i<arr->size; i++) {
-        arr->items[index] == value;
-        arr->items[i+1] = arr->items[i];
-    }
+	for(int i=arr->size; i>index; i--){
+		arr->items[i] = arr->items[i-1];
+	}
+	arr->items[index] = value;
+	arr->size++;
 }
 
 void delete(IntArray *arr, int index) {
@@ -107,11 +98,10 @@ void delete(IntArray *arr, int index) {
 		printf("Error: index is invalid\n");
 		return;
 	}
-    for(int i=index; i<arr->size; i++) {
-        arr->items[index] == NULL;
+    for(int i=index; i<arr->size-1; i++) {
         arr->items[i] = arr->items[i+1];
     }
-   
+	arr->size--;
 }
 
 int getMax(IntArray *arr) {
@@ -145,7 +135,7 @@ int getSum(IntArray *arr) {
 int find(IntArray *arr, int value) {
     for(int i=0; i<arr->size; i++) {
         if(arr->items[i] == value) {
-            return i+1;
+            return i;
         }
     }
 	return -1;
