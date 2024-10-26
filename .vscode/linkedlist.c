@@ -91,6 +91,7 @@ int getSize(LinkedList *list) {
 	return size;
 }
 
+
 Node* getNode(LinkedList *list, int index) {
 	// starting from the head, find the index-th element
 	// return head if index <= 0

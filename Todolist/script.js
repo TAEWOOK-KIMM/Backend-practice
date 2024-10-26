@@ -1,4 +1,4 @@
-const input = document.getElementById('todo-input');
+  const input = document.getElementById('todo-input');
 const addButton = document.getElementById('add-btn');
 const todoList = document.getElementById('todo-list');
 
@@ -10,7 +10,7 @@ function addTodo() {
     const listItem = document.createElement('li');
 
     const taskText = document.createElement('span');
-    taskText.textContent = task;
+    taskText.textContent = task; 
 
     const completeButton = document.createElement('button');
     completeButton.textContent = 'Complete';
